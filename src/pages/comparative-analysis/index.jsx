@@ -187,10 +187,11 @@ const ComparativeAnalysis = () => {
               <span>Comparative Analysis</span>
             </div>
             <h1 className="text-4xl font-bold text-foreground mb-4">
-              {getTranslation('smartAgriculturalComparisons', currentLanguage)}
+              Smart Agricultural Comparisons
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {getTranslation('dataDrivenDecisionsDescription', currentLanguage)}
+              Make data-driven decisions with side-by-side comparisons of crops, fertilizers, and pest control solutions. 
+              Get expert validation and regional benchmarks for optimal farming choices.
             </p>
           </div>
 
