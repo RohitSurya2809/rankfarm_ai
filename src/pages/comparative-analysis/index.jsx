@@ -8,7 +8,7 @@ import ComparisonMatrix from './components/ComparisonMatrix';
 import RankingSliders from './components/RankingSliders';
 import RegionalBenchmark from './components/RegionalBenchmark';
 import ExpertValidation from './components/ExpertValidation';
-
+import { getTranslation } from '../../utils/translations';
 const ComparativeAnalysis = () => {
   const [selectedItems, setSelectedItems] = useState({
     crops: [],
