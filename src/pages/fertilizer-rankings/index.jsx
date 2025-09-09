@@ -294,10 +294,10 @@ const FertilizerRankings = () => {
                 <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
                   <Icon name="Beaker" size={24} color="white" />
                 </div>
-                <h1 className="text-4xl md:text-5xl font-bold">{getTranslation('fertilizerRankings', currentLanguage)}</h1>
+                <h1 className="text-4xl md:text-5xl font-bold">{t?.title}</h1>
               </div>
               <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
-                {getTranslation('aiPoweredFertilizerRecommendations', currentLanguage)}
+                {t?.subtitle}
               </p>
               
               {/* Quick Navigation */}

@@ -301,7 +301,7 @@ const CropRecommendations = () => {
                 iconName="ArrowLeft"
                 iconPosition="left"
               >
-                {getTranslation('backToDashboard', currentLanguage)}
+                Back to Dashboard
               </Button>
               <Button
                 variant="default"
@@ -309,7 +309,7 @@ const CropRecommendations = () => {
                 iconName="ArrowRight"
                 iconPosition="right"
               >
-                {getTranslation('next', currentLanguage)}: {getTranslation('fertilizers', currentLanguage)}
+                Next: Fertilizers
               </Button>
             </div>
           </div>

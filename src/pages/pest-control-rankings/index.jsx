@@ -374,11 +374,12 @@ const PestControlRankings = () => {
               <div className="flex items-center justify-center space-x-2 mb-4">
                 <Icon name="Bug" size={32} className="text-primary" />
                 <h1 className="text-3xl md:text-4xl font-bold text-foreground">
-                  {getTranslation('pestControlRankings', currentLanguage)}
+                  Pest Control Rankings
                 </h1>
               </div>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                {getTranslation('tieredPestManagement', currentLanguage)}
+                Tiered pest management recommendations with control rates, costs, and treatment effectiveness scores. 
+                Choose from immediate solutions, preventive measures, and long-term management strategies.
               </p>
             </div>
 

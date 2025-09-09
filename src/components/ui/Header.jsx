@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Icon from '../AppIcon';
 import Button from './Button';
-import { getTranslation } from '../../utils/translations';
 
 const Header = () => {
   const location = useLocation();
@@ -15,52 +14,51 @@ const Header = () => {
 
   const languages = [
     { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'uk', name: 'English (UK)', flag: '🇬🇧' },
     { code: 'hi', name: 'हिंदी', flag: '🇮🇳' },
     { code: 'ta', name: 'தமிழ்', flag: '🇮🇳' }
   ];
 
   const navigationItems = [
     {
-      label: getTranslation('dashboard', currentLanguage),
+      label: 'Dashboard',
       path: '/dashboard',
       icon: 'LayoutDashboard',
-      tooltip: getTranslation('dashboard', currentLanguage),
+      tooltip: 'AI recommendations overview',
       voiceLabel: { en: 'Dashboard', hi: 'डैशबोर्ड', ta: 'டாஷ்போர்டு' }
     },
     {
-      label: getTranslation('crops', currentLanguage),
+      label: 'Crops',
       path: '/crop-recommendations',
       icon: 'Wheat',
-      tooltip: getTranslation('crops', currentLanguage),
+      tooltip: 'Crop recommendations',
       voiceLabel: { en: 'Crops', hi: 'फसल', ta: 'பயிர்கள்' }
     },
     {
-      label: getTranslation('fertilizers', currentLanguage),
+      label: 'Fertilizers',
       path: '/fertilizer-rankings',
       icon: 'Beaker',
-      tooltip: getTranslation('fertilizers', currentLanguage),
+      tooltip: 'Fertilizer rankings',
       voiceLabel: { en: 'Fertilizers', hi: 'उर्वरक', ta: 'உரங்கள்' }
     },
     {
-      label: getTranslation('pestControl', currentLanguage),
+      label: 'Pest Control',
       path: '/pest-control-rankings',
       icon: 'Bug',
-      tooltip: getTranslation('pestControl', currentLanguage),
+      tooltip: 'Pest management',
       voiceLabel: { en: 'Pest Control', hi: 'कीट नियंत्रण', ta: 'பூச்சி கட்டுப்பாடு' }
     },
     {
-      label: getTranslation('compare', currentLanguage),
+      label: 'Compare',
       path: '/comparative-analysis',
       icon: 'BarChart3',
-      tooltip: getTranslation('compare', currentLanguage),
+      tooltip: 'Comparative analysis',
       voiceLabel: { en: 'Compare', hi: 'तुलना', ta: 'ஒப்பீடு' }
     },
     {
-      label: getTranslation('analytics', currentLanguage),
+      label: 'Analytics',
       path: '/success-analytics',
       icon: 'TrendingUp',
-      tooltip: getTranslation('analytics', currentLanguage),
+      tooltip: 'Success analytics',
       voiceLabel: { en: 'Analytics', hi: 'विश्लेषण', ta: 'பகுப்பாய்வு' }
     }
   ];

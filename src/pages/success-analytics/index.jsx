@@ -379,8 +379,8 @@ const SuccessAnalytics = () => {
           <div className="mb-8">
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
               <div>
-                <h1 className="text-3xl font-bold text-foreground mb-2">{getTranslation('successAnalytics', currentLanguage)}</h1>
-                <p className="text-muted-foreground">{getTranslation('trackFarmingPerformance', currentLanguage)}</p>
+                <h1 className="text-3xl font-bold text-foreground mb-2">{t?.title}</h1>
+                <p className="text-muted-foreground">{t?.subtitle}</p>
               </div>
               <div className="flex items-center space-x-3 mt-4 sm:mt-0">
                 <Button

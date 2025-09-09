@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Icon from '../../components/AppIcon';
 import Button from '../../components/ui/Button';
-import { getTranslation } from '../../utils/translations';
 import HeroRankingCards from './components/HeroRankingCards';
 import MetricsCards from './components/MetricsCards';
 import RankingPodium from './components/RankingPodium';
@@ -29,17 +28,14 @@ const Dashboard = () => {
     let greetingText = '';
     
     if (hour < 12) {
-      greetingText = getTranslation('goodMorning', currentLanguage) || 
-                    (currentLanguage === 'hi' ? 'सुप्रभात' : 
-                     currentLanguage === 'ta' ? 'காலை வணக்கம்' : 'Good Morning');
+      greetingText = currentLanguage === 'hi' ? 'सुप्रभात' : 
+                    currentLanguage === 'ta'? 'காலை வணக்கம்' : 'Good Morning';
     } else if (hour < 17) {
-      greetingText = getTranslation('goodAfternoon', currentLanguage) || 
-                    (currentLanguage === 'hi' ? 'नमस्कार' : 
-                     currentLanguage === 'ta' ? 'மதிய வணக்கம்' : 'Good Afternoon');
+      greetingText = currentLanguage === 'hi' ? 'नमस्कार' : 
+                    currentLanguage === 'ta'? 'மதிய வணக்கம்' : 'Good Afternoon';
     } else {
-      greetingText = getTranslation('goodEvening', currentLanguage) || 
-                    (currentLanguage === 'hi' ? 'शुभ संध्या' : 
-                     currentLanguage === 'ta' ? 'மாலை வணக்கம்' : 'Good Evening');
+      greetingText = currentLanguage === 'hi' ? 'शुभ संध्या' : 
+                    currentLanguage === 'ta'? 'மாலை வணக்கம்' : 'Good Evening';
     }
     
     setGreeting(greetingText);
@@ -93,7 +89,8 @@ const Dashboard = () => {
                   {greeting}, Farmer!
                 </h1>
                 <p className="text-muted-foreground">
-                  {getTranslation('aiPoweredRankings', currentLanguage)}
+                  {currentLanguage === 'hi' ? 'आपके खेत की सफलता के लिए AI-संचालित सिफारिशें' : 
+                   currentLanguage === 'ta'? 'உங்கள் பண்ணையின் வெற்றிக்கான AI-இயக்கப்படும் பரிந்துரைகள்' : 'AI-powered recommendations for your farm\'s success'}
                 </p>
               </div>
             </div>
@@ -107,7 +104,8 @@ const Dashboard = () => {
               iconPosition="left"
               className="hidden sm:flex"
             >
-              {getTranslation('welcomeMessage', currentLanguage)}
+              {currentLanguage === 'hi' ? 'स्वागत संदेश' : 
+               currentLanguage === 'ta'? 'வரவேற்பு செய்தி' : 'Welcome Message'}
             </Button>
           </div>
 
@@ -151,10 +149,12 @@ const Dashboard = () => {
           <div className="bg-gradient-to-r from-primary/10 to-secondary/10 border border-primary/20 rounded-xl p-8 text-center">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-2xl font-bold text-foreground mb-4">
-                {getTranslation('enhanceFarmingJourney', currentLanguage)}
+                {currentLanguage === 'hi' ? 'अपनी कृषि यात्रा को बेहतर बनाएं' : 
+                 currentLanguage === 'ta'? 'உங்கள் விவசாய பயணத்தை மேம்படுத்துங்கள்' : 'Enhance Your Farming Journey'}
               </h2>
               <p className="text-muted-foreground mb-6">
-                {getTranslation('dataDrivenDecisions', currentLanguage)}
+                {currentLanguage === 'hi' ? 'RankFarm AI के साथ डेटा-संचालित निर्णय लें और अपनी फसल की पैदावार को अधिकतम करें' : 
+                 currentLanguage === 'ta'? 'RankFarm AI உடன் தரவு-உந்துதல் முடிவுகளை எடுத்து உங்கள் பயிர் விளைச்சலை அதிகரிக்கவும்' : 'Make data-driven decisions with RankFarm AI and maximize your crop yields'}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button
@@ -163,7 +163,8 @@ const Dashboard = () => {
                   iconName="BarChart3"
                   iconPosition="left"
                 >
-                  {getTranslation('comparativeAnalysis', currentLanguage)}
+                  {currentLanguage === 'hi' ? 'तुलनात्मक विश्लेषण' : 
+                   currentLanguage === 'ta'? 'ஒப்பீட்டு பகுப்பாய்வு' : 'Comparative Analysis'}
                 </Button>
                 <Button
                   variant="outline"
@@ -171,7 +172,8 @@ const Dashboard = () => {
                   iconName="TrendingUp"
                   iconPosition="left"
                 >
-                  {getTranslation('successAnalytics', currentLanguage)}
+                  {currentLanguage === 'hi' ? 'सफलता विश्लेषण' : 
+                   currentLanguage === 'ta'? 'வெற்றி பகுப்பாய்வு' : 'Success Analytics'}
                 </Button>
               </div>
             </div>
